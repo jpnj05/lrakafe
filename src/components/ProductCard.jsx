@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, headingLevel = 3 }) {
+  const Heading = `h${headingLevel}`
+
   return (
     <article className="product-card">
       <Link
@@ -15,9 +17,9 @@ export default function ProductCard({ product }) {
 
       <div className="product-body">
         <div className="product-line">
-          <h3>
+          <Heading>
             <Link to={`/shop/${product.slug}`}>{product.name}</Link>
-          </h3>
+          </Heading>
           <span className="price">₱{product.price}</span>
         </div>
         <p className="product-short">{product.short}</p>

@@ -62,7 +62,7 @@ export default function Shop() {
 
           <div className="product-grid" ref={gridRef}>
             {visible.map((product) => (
-              <ProductCard key={product.slug} product={product} />
+              <ProductCard key={product.slug} product={product} headingLevel={2} />
             ))}
           </div>
 

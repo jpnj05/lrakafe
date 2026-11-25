@@ -29,6 +29,7 @@ export default function Contact() {
       <section className="section section-contact">
         <div className="container-lra contact-grid">
           <Reveal className="contact-info" selector=".info-block, .hours-list" stagger={0.08}>
+            <h2 className="visually-hidden">Shop details and opening hours</h2>
             <div className="info-block">
               <h3>Visit</h3>
               <p>
