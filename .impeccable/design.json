@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T16:10:49.554Z",
+  "title": "Design System: LraKafe",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Roasted Clay",
+        "canonical": "#c0764a",
+        "purpose": "Italic accent word, link arrows, button hover fill.",
+        "tonalRamp": [
+          "#32231b",
+          "#663c24",
+          "#945733",
+          "#c07649",
+          "#d09877",
+          "#dfbaa4",
+          "#eedace",
+          "#f6f1ee"
+        ]
+      },
+      "primary-deep": {
+        "role": "primary",
+        "displayName": "Deep Clay",
+        "canonical": "#a3562e",
+        "purpose": "Legible small type on cream: eyebrows, prices, labels.",
+        "tonalRamp": [
+          "#32231b",
+          "#6b391e",
+          "#9b522c",
+          "#c96f40",
+          "#d79370",
+          "#e4b7a0",
+          "#f0d8cb",
+          "#f6f1ee"
+        ]
+      },
+      "accent-gold": {
+        "role": "secondary",
+        "displayName": "Toasted Gold",
+        "canonical": "#d7a555",
+        "purpose": "Accent on espresso panels only: marquee marks, progress line.",
+        "tonalRamp": [
+          "#32291b",
+          "#6f4f1a",
+          "#a17226",
+          "#d09639",
+          "#dcb06a",
+          "#e8cb9c",
+          "#f2e3c9",
+          "#f6f3ee"
+        ]
+      },
+      "neutral-bg": {
+        "role": "neutral",
+        "displayName": "Cream Paper",
+        "canonical": "#f7efe2",
+        "purpose": "The page base on every route.",
+        "tonalRamp": [
+          "#32291b",
+          "#6c4e1e",
+          "#9c712b",
+          "#ca953f",
+          "#d7b06f",
+          "#e5ca9f",
+          "#f1e2cb",
+          "#f6f3ee"
+        ]
+      },
+      "neutral-surface": {
+        "role": "neutral",
+        "displayName": "Soft Cream",
+        "canonical": "#fcf7ee",
+        "purpose": "Cards, forms, quote cards, scrolled header.",
+        "tonalRamp": [
+          "#322a1b",
+          "#755315",
+          "#a9771e",
+          "#da9d2f",
+          "#e3b663",
+          "#edce97",
+          "#f5e4c7",
+          "#f6f3ee"
+        ]
+      },
+      "neutral-sand": {
+        "role": "neutral",
+        "displayName": "Sand",
+        "canonical": "#ecdec9",
+        "purpose": "Quote band, placeholder media, monograms.",
+        "tonalRamp": [
+          "#32291b",
+          "#664b24",
+          "#936d34",
+          "#bf904a",
+          "#cfac77",
+          "#dfc8a4",
+          "#eee1ce",
+          "#f6f3ee"
+        ]
+      },
+      "neutral-sand-deep": {
+        "role": "neutral",
+        "displayName": "Sand Deep",
+        "canonical": "#ddc8ab",
+        "purpose": "Placeholder media at rest.",
+        "tonalRamp": [
+          "#32281b",
+          "#624a28",
+          "#8e6a39",
+          "#b88d51",
+          "#caa97c",
+          "#dcc6a8",
+          "#ece0d0",
+          "#f6f3ee"
+        ]
+      },
+      "espresso": {
+        "role": "neutral",
+        "displayName": "Espresso",
+        "canonical": "#2b1a12",
+        "purpose": "Dark bands, primary buttons, body ink.",
+        "tonalRamp": [
+          "#32221b",
+          "#613b29",
+          "#8c553b",
+          "#b77352",
+          "#c9967e",
+          "#dbb9a9",
+          "#ebd9d0",
+          "#f6f1ee"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Near-Black Ink",
+        "canonical": "#1d110a",
+        "purpose": "Footer ground only.",
+        "tonalRamp": [
+          "#32231b",
+          "#663c23",
+          "#945733",
+          "#c07549",
+          "#d09776",
+          "#e0baa4",
+          "#eedace",
+          "#f6f1ee"
+        ]
+      },
+      "bark": {
+        "role": "neutral",
+        "displayName": "Bark",
+        "canonical": "#5b3c2a",
+        "purpose": "Secondary text, labels, hairlines.",
+        "tonalRamp": [
+          "#32231b",
+          "#5e3e2b",
+          "#885a3f",
+          "#b27958",
+          "#c59a81",
+          "#d8bcab",
+          "#eadbd2",
+          "#f6f1ee"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headlines only, two lines, one italic clay word."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings, revealed word by word."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Drink names, card titles, spec values."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy in Bark, capped near 50ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Eyebrows, nav, buttons, badges — uppercase only at this scale."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hero-arch",
+        "value": "0 40px 70px -46px rgba(43, 26, 18, 0.65)",
+        "purpose": "Lifts the hero photograph off the cream page."
+      },
+      {
+        "name": "stamp",
+        "value": "0 16px 34px -16px rgba(43, 26, 18, 0.45)",
+        "purpose": "Rotating stamp disc at the hero image corner."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.22, 0.7, 0.28, 1)",
+        "purpose": "All hover, fill and layout transitions."
+      },
+      {
+        "name": "reveal",
+        "value": "900ms power3.out",
+        "purpose": "Scroll-triggered section and card reveals."
+      },
+      {
+        "name": "heading-mask",
+        "value": "1050ms power3.out, 55ms stagger",
+        "purpose": "Word-by-word masked heading reveal."
+      },
+      {
+        "name": "button-fill",
+        "value": "450ms cubic-bezier(0.22, 0.7, 0.28, 1)",
+        "purpose": "Clay panel sliding up inside pill buttons."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xl",
+        "value": "1200px"
+      },
+      {
+        "name": "lg",
+        "value": "992px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "sm",
+        "value": "576px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Espresso pill with a clay panel that slides up on hover. The only filled action in the system.",
+      "html": "<button class=\"ds-btn\">Explore the menu <span aria-hidden=\"true\">&#8594;</span></button>",
+      "css": ".ds-btn { position: relative; display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 1.65rem; border: 1px solid #2b1a12; border-radius: 999px; background: #2b1a12; color: #f7efe2; font-family: Manrope, system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; overflow: hidden; transition: color 0.4s cubic-bezier(0.22,0.7,0.28,1), border-color 0.4s cubic-bezier(0.22,0.7,0.28,1); } .ds-btn::after { content: \"\"; position: absolute; inset: 0; background: #c0764a; transform: translateY(101%); transition: transform 0.45s cubic-bezier(0.22,0.7,0.28,1); } .ds-btn > * { position: relative; z-index: 1; } .ds-btn:hover { border-color: #c0764a; color: #fcf7ee; } .ds-btn:hover::after { transform: translateY(0); } .ds-btn:focus-visible { outline: 2px solid #a3562e; outline-offset: 4px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outline-only secondary action for use beside the primary.",
+      "html": "<button class=\"ds-btn-ghost\">Shop all drinks <span aria-hidden=\"true\">&#8599;</span></button>",
+      "css": ".ds-btn-ghost { position: relative; display: inline-flex; align-items: center; gap: 0.6rem; padding: 1rem 1.65rem; border: 1px solid rgba(91,60,42,0.45); border-radius: 999px; background: transparent; color: #2b1a12; font-family: Manrope, system-ui, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; overflow: hidden; transition: color 0.4s cubic-bezier(0.22,0.7,0.28,1), border-color 0.4s cubic-bezier(0.22,0.7,0.28,1); } .ds-btn-ghost::after { content: \"\"; position: absolute; inset: 0; background: #c0764a; transform: translateY(101%); transition: transform 0.45s cubic-bezier(0.22,0.7,0.28,1); } .ds-btn-ghost > * { position: relative; z-index: 1; } .ds-btn-ghost:hover { color: #fcf7ee; border-color: #c0764a; } .ds-btn-ghost:hover::after { transform: translateY(0); } .ds-btn-ghost:focus-visible { outline: 2px solid #a3562e; outline-offset: 4px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Category and size selector. Outline at rest, espresso fill when selected.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip is-active\">Signature</button><button class=\"ds-chip\">Espresso</button><button class=\"ds-chip\">Cold Brew</button></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 0.55rem; } .ds-chip { padding: 0.55rem 1.05rem; border: 1px solid rgba(91,60,42,0.3); border-radius: 999px; background: transparent; color: #5b3c2a; font-family: Manrope, system-ui, sans-serif; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer; transition: background 0.3s cubic-bezier(0.22,0.7,0.28,1), color 0.3s cubic-bezier(0.22,0.7,0.28,1), border-color 0.3s cubic-bezier(0.22,0.7,0.28,1); } .ds-chip:hover { border-color: #2b1a12; color: #2b1a12; } .ds-chip.is-active { background: #2b1a12; border-color: #2b1a12; color: #f7efe2; } .ds-chip:focus-visible { outline: 2px solid #a3562e; outline-offset: 3px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "Drink card: rounded media, serif name, clay price, uppercase tasting notes.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-media\"><span class=\"ds-card-badge\">Signature</span></div><div class=\"ds-card-body\"><div class=\"ds-card-line\"><h3>Lra Signature Latte</h3><span class=\"ds-price\">&#8369;185</span></div><p class=\"ds-card-copy\">Double ristretto, steamed carabao milk, a whisper of muscovado.</p><ul class=\"ds-notes\"><li>Muscovado</li><li>Toasted hazelnut</li></ul></div></article>",
+      "css": ".ds-card { display: flex; flex-direction: column; max-width: 360px; color: #1d110a; font-family: Manrope, system-ui, sans-serif; } .ds-card-media { position: relative; aspect-ratio: 1; border-radius: 22px; overflow: hidden; background: radial-gradient(120% 120% at 30% 20%, #ddc8ab, #ecdec9 60%, #f5e7d4); } .ds-card-badge { position: absolute; top: 0.9rem; left: 0.9rem; padding: 0.34rem 0.7rem; border-radius: 999px; background: rgba(252,247,238,0.92); color: #5b3c2a; font-size: 0.58rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; } .ds-card-body { padding: 1.1rem 0.15rem 0; } .ds-card-line { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; } .ds-card-line h3 { margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 1.28rem; letter-spacing: -0.02em; color: #2b1a12; } .ds-price { font-family: Fraunces, Georgia, serif; font-size: 1.02rem; color: #a3562e; } .ds-card-copy { margin: 0.45rem 0 0.85rem; font-size: 0.87rem; line-height: 1.65; color: #5b3c2a; } .ds-notes { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; list-style: none; } .ds-notes li { padding: 0.26rem 0.6rem; border: 1px solid rgba(91,60,42,0.22); border-radius: 999px; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #5b3c2a; } .ds-card-media::after { content: \"\"; position: absolute; inset: 0; background: radial-gradient(60% 50% at 50% 45%, rgba(43,26,18,0.18), transparent 70%); }"
+    },
+    {
+      "name": "Underlined Field",
+      "kind": "input",
+      "refersTo": "field-underline",
+      "description": "Form field with no box: a single hairline underline that turns clay on focus.",
+      "html": "<label class=\"ds-field\"><span>Email</span><input type=\"email\" placeholder=\"you@email.com\" /></label>",
+      "css": ".ds-field { display: grid; gap: 0.3rem; width: 100%; max-width: 380px; font-family: Manrope, system-ui, sans-serif; } .ds-field span { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #5b3c2a; } .ds-field input { padding: 0.65rem 0; border: 0; border-bottom: 1px solid rgba(91,60,42,0.32); border-radius: 0; background: transparent; color: #2b1a12; font-family: inherit; font-size: 0.92rem; outline: none; transition: border-color 0.3s cubic-bezier(0.22,0.7,0.28,1); } .ds-field input::placeholder { color: rgba(91,60,42,0.45); } .ds-field input:focus { border-bottom-color: #c0764a; }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": "card-surface",
+      "description": "Fixed masthead: serif wordmark with clay asterisk, uppercase links, clay underline on hover.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-brand\">LraKafe<i>*</i></span><div class=\"ds-links\"><a class=\"is-active\" href=\"#\">Home</a><a href=\"#\">Shop</a><a href=\"#\">About</a><a href=\"#\">Contact Us</a></div></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; width: 100%; padding: 1rem 1.5rem; border-radius: 18px; background: #fcf7ee; box-shadow: 0 1px 0 rgba(43,26,18,0.09); font-family: Manrope, system-ui, sans-serif; } .ds-brand { font-family: Fraunces, Georgia, serif; font-size: 1.5rem; letter-spacing: -0.04em; color: #2b1a12; } .ds-brand i { margin-left: 0.12em; color: #c0764a; font-style: normal; font-size: 1.25em; } .ds-links { display: flex; gap: 1.6rem; } .ds-links a { position: relative; padding: 0.3rem 0; color: #5b3c2a; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; } .ds-links a::after { content: \"\"; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: #c0764a; transform: scaleX(0); transform-origin: left center; transition: transform 0.4s cubic-bezier(0.22,0.7,0.28,1); } .ds-links a:hover, .ds-links a.is-active { color: #2b1a12; } .ds-links a:hover::after, .ds-links a.is-active::after { transform: scaleX(1); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Warm Corner",
+    "overview": "LraKafe looks like a printed menu left on a wooden table: cream paper, espresso ink, one clay-colored pen mark. The system is editorial rather than app-like — oversized serif headlines with a single italic accent word, generous vertical silence, photography framed in arches, and hairline rules instead of boxes. Nothing is pure white, nothing is pure black, and no surface is flat gray. Density stays low: sections breathe at 70–120px, type scales with viewport-aware clamps, and colour is used sparingly so the espresso panels land like a held breath. Motion is slow and deliberate — Lenis smooth scroll, GSAP reveals, masked word-by-word headings, parallax imagery, one pinned three-step ritual — and it never delays reading.",
+    "keyCharacteristics": [
+      "Cream paper base, espresso ink panels, clay accent used on roughly a tenth of any screen.",
+      "Fraunces display serif paired with Manrope for everything functional.",
+      "One italic clay word per headline; never two.",
+      "Arched hero imagery, rounded editorial cards, hairline rules at low opacity.",
+      "Flat surfaces with two long, soft shadows reserved for photography.",
+      "A recurring asterisk mark used as a stamp, a bullet and a decorative field."
+    ],
+    "rules": [
+      {
+        "name": "The Cream Margin Rule",
+        "body": "Every dark panel is a band inside cream, never the page itself. The page always begins and ends in cream paper.",
+        "section": "colors"
+      },
+      {
+        "name": "The Clay Rarity Rule",
+        "body": "Clay and gold together stay under ~10% of any viewport. Their scarcity is what makes them read as brand.",
+        "section": "colors"
+      },
+      {
+        "name": "The Italic Turn Rule",
+        "body": "Exactly one word per heading is italic and clay. If the heading has no natural turn, use none.",
+        "section": "typography"
+      },
+      {
+        "name": "The Caps-Sparingly Rule",
+        "body": "Uppercase exists only at label scale (≤0.72rem) with ≥0.14em tracking. Never set a sentence in caps.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Card-Shadow Rule",
+        "body": "Panels and cards are flat at rest and stay flat on hover. Shadows belong to photographs and the stamp only.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the page base on Cream Paper (#f7efe2) and reserve espresso for full-bleed bands and primary buttons.",
+      "Do set headlines in Fraunces at weight 400 with −0.025em or tighter tracking, and italicise at most one clay word.",
+      "Do separate sections with tonal change and 1px hairlines at rgba(91, 60, 42, 0.18) rather than cards with borders.",
+      "Do cap body copy near 48–52ch and keep labels uppercase at ≤0.72rem with ≥0.14em tracking.",
+      "Do use 999px pills for actions and 22–28px radii for surfaces, and keep the arch radius unique to the hero photograph.",
+      "Do grade photography warm (amber, brown, cream) and let it carry the saturation the interface refuses."
+    ],
+    "donts": [
+      "Don’t introduce pure white (#fff) or pure black (#000) — the lightest surface is #fcf7ee and the darkest is #1d110a.",
+      "Don’t add blue, green, pink or neon accents; clay, gold and brown are the entire hue range.",
+      "Don’t apply shadows to buttons, chips, cards or inputs, and don’t add glows or glassmorphism beyond the header’s 14px blur.",
+      "Don’t use more than one italic accent word in a heading, or set a heading in caps.",
+      "Don’t fill large areas with clay or gold — they are marks, not backgrounds.",
+      "Don’t let a dark band run edge-to-edge of the page without cream above and below it."
+    ]
+  }
+}
