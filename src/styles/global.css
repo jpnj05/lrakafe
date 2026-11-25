@@ -1461,19 +1461,6 @@ a {
   color: var(--bark);
 }
 
-.shop-note {
-  max-width: 58ch;
-  margin-top: clamp(2.2rem, 4vw, 3rem);
-  padding-top: 1.4rem;
-  border-top: 1px solid var(--hairline);
-  font-size: 0.82rem;
-  color: var(--bark);
-}
-
-.shop-note p {
-  margin: 0;
-}
-
 /* ------------------------- product page ------------------------- */
 
 .page-hero--product {

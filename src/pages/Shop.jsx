@@ -65,14 +65,6 @@ export default function Shop() {
               <ProductCard key={product.slug} product={product} headingLevel={2} />
             ))}
           </div>
-
-          <div className="shop-note">
-            <p>
-              All prices in Philippine pesos. Oat and carabao milk swaps are
-              free — just say the word. Beans are available in 250 g bags
-              behind the bar.
-            </p>
-          </div>
         </div>
       </section>
     </>
