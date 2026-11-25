@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function ProductCard({ product, headingLevel = 3 }) {
   const Heading = `h${headingLevel}`
+  const hasMultipleSizes = (product.sizes?.length ?? 0) > 1
 
   return (
     <article className="product-card">
@@ -21,7 +22,8 @@ export default function ProductCard({ product, headingLevel = 3 }) {
             <Link to={`/shop/${product.slug}`}>{product.name}</Link>
           </Heading>
           <span className="price">
-            <span className="price-from">from</span> ₱{product.price}
+            {hasMultipleSizes && <span className="price-from">from</span>}
+            <span>₱{product.price}</span>
           </span>
         </div>
         <p className="product-short">{product.short}</p>

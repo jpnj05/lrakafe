@@ -883,6 +883,9 @@ a {
 }
 
 .price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.28rem;
   font-family: var(--font-display);
   font-size: 1.02rem;
   color: var(--clay-deep);
@@ -890,7 +893,6 @@ a {
 }
 
 .price-from {
-  margin-right: 0.15rem;
   font-family: var(--font-body);
   font-size: 0.72rem;
   font-weight: 600;
