@@ -6,12 +6,14 @@ import Reveal from '../components/Reveal'
 import { getProduct, products } from '../data/products'
 import NotFound from './NotFound'
 
-const sizes = ['12 oz', '16 oz', 'Iced']
+const defaultSizes = ['12 oz', '16 oz', 'Iced']
 
 export default function Product() {
   const { slug } = useParams()
   const product = getProduct(slug)
-  const [size, setSize] = useState(sizes[0])
+  const sizes = product?.sizes ?? defaultSizes
+  const [chosenSize, setChosenSize] = useState(null)
+  const size = sizes.includes(chosenSize) ? chosenSize : sizes[0]
 
   if (!product) return <NotFound />
 
@@ -70,7 +72,7 @@ export default function Product() {
                     type="button"
                     className={`filter-chip${size === option ? ' is-active' : ''}`}
                     aria-pressed={size === option}
-                    onClick={() => setSize(option)}
+                    onClick={() => setChosenSize(option)}
                   >
                     {option}
                   </button>
