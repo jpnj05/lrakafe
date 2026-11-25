@@ -40,7 +40,7 @@
         "role": "secondary",
         "displayName": "Toasted Gold",
         "canonical": "#d7a555",
-        "purpose": "Accent on espresso panels only: marquee marks, progress line.",
+        "purpose": "Accent on espresso panels only: progress line, footer mark.",
         "tonalRamp": [
           "#32291b",
           "#6f4f1a",

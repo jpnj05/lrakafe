@@ -121,7 +121,7 @@ A toasted, low-chroma palette: dark roasted browns against cream paper, with ter
 - **Deep Clay** (#a3562e): small type that must stay legible on cream — eyebrows, prices, owner roles, form labels. Never used for large fills.
 
 ### Secondary
-- **Toasted Gold** (#d7a555): dark-panel accent only — the italic word in dark sections, the marquee asterisks, the ritual progress line, the footer brand mark.
+- **Toasted Gold** (#d7a555): dark-panel accent only — the italic word in dark sections, the ritual progress line, the footer brand mark.
 
 ### Neutral
 - **Cream Paper** (#f7efe2): the page base for every route.
@@ -179,9 +179,7 @@ Two long, soft, low-opacity shadows are allowed, both attached to photography ra
 
 Form language is **soft and edible**: pills for anything actionable (999px), 22px for imagery, 26–28px for panels and the map card, and a single architectural arch (`300px 300px 26px 26px`) reserved for the hero photograph. Inputs break the pattern deliberately — squared, transparent, underlined only.
 
-The asterisk (`*`) is the recurring glyph: set in Fraunces, clay or gold, used as a brand mark after the wordmark, as a rotating stamp, as marquee separators, and as an oversized watermark in the invitation band.
-
-The one other signature shape is the marquee strip on espresso: a full-bleed band of serif phrases separated by gold asterisks, scrolling continuously and slowing on hover.
+The asterisk (`*`) is the recurring glyph: set in Fraunces, clay or gold, used as a brand mark after the wordmark, as a rotating stamp, and as an oversized watermark in the invitation band.
 
 ## Components
 
@@ -215,7 +213,6 @@ The one other signature shape is the marquee strip on espresso: a full-bleed ban
 
 ### Signature Components
 - **Rotating stamp:** a 118px cream disc at the hero image's lower-right, carrying circular uppercase tracking text that spins over 24s, with a clay asterisk at its centre.
-- **Marquee ticker:** espresso band, serif phrases, gold asterisks, 34s loop that slows to a third of its speed on hover.
 
 ## Do's and Don'ts
 

@@ -789,50 +789,6 @@ a {
   }
 }
 
-/* ------------------------- ticker ------------------------- */
-
-.ticker {
-  position: relative;
-  z-index: 1;
-  margin-top: clamp(1.5rem, 4vh, 3rem);
-  padding-block: 1rem;
-  background: var(--espresso);
-  color: var(--cream);
-  overflow: hidden;
-}
-
-.marquee {
-  overflow: hidden;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  will-change: transform;
-}
-
-.marquee-group {
-  display: flex;
-  align-items: center;
-}
-
-.marquee-item {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 1.5vw, 1.3rem);
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  color: var(--cream);
-}
-
-.marquee-item::after {
-  content: '✳';
-  margin-inline: 1.6rem;
-  color: var(--gold);
-  font-size: 0.78em;
-}
-
 /* ------------------------- product cards ------------------------- */
 
 .product-grid {
