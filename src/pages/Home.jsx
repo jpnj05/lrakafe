@@ -2,7 +2,6 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import AnimatedHeading from '../components/AnimatedHeading'
 import Magnetic from '../components/Magnetic'
-import Marquee from '../components/Marquee'
 import ProductCard from '../components/ProductCard'
 import Reveal from '../components/Reveal'
 import { products } from '../data/products'
@@ -10,14 +9,6 @@ import { gsap, useGSAP } from '../lib/gsap'
 import { prefersReducedMotion } from '../lib/motion'
 
 const featured = products.filter((product) => product.featured)
-
-const tickerItems = [
-  'Small-batch roasting',
-  'Single-origin beans',
-  'House-made syrups',
-  'Slow pour-over bar',
-  'Open till late',
-]
 
 const steps = [
   {
@@ -247,10 +238,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div className="ticker">
-        <Marquee items={tickerItems} speed={34} />
-      </div>
 
       <section className="section section-featured">
         <div className="container-lra">
