@@ -18,7 +18,7 @@ export default function SiteFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>Explore</h4>
+            <h3>Explore</h3>
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
             <Link to="/about">About</Link>
@@ -26,7 +26,7 @@ export default function SiteFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>Visit</h4>
+            <h3>Visit</h3>
             <p>28 Luna Street, Jaro</p>
             <p>Iloilo City, 5000 PH</p>
             <p>+63 912 345 6789</p>
@@ -34,7 +34,7 @@ export default function SiteFooter() {
           </div>
 
           <div className="footer-col">
-            <h4>Open daily</h4>
+            <h3>Open daily</h3>
             <p>Mon — Thu · 7 AM – 10 PM</p>
             <p>Fri — Sat · 7 AM – 12 MN</p>
             <p>Sunday · 8 AM – 9 PM</p>

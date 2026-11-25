@@ -184,6 +184,7 @@ typography:
     lineHeight: 1
 rounded:
   field: "12px"
+  caption: "16px"
   badge: "18px"
   media: "22px"
   menu: "24px"
@@ -323,7 +324,7 @@ Two long, soft, low-opacity shadows are allowed, both attached to photography ra
 
 ## Shapes
 
-Form language is **soft and edible**: pills for anything actionable (999px), 22px for imagery, 26–28px for panels and the map card, and a single architectural arch (`300px 300px 26px 26px`) reserved for the hero photograph. The smaller steps are 12px for inline alerts, 18px for badges, tags and map pins, and 24px for the mobile drawer. Inputs break the pattern deliberately — squared, transparent, underlined only.
+Form language is **soft and edible**: pills for anything actionable (999px), 22px for imagery, 26–28px for panels and the map card, and a single architectural arch (`300px 300px 26px 26px`) reserved for the hero photograph. The smaller steps are 12px for inline alerts, 16px for the map caption panel, 18px for badges, tags and map pins, and 24px for the mobile drawer. Inputs break the pattern deliberately — squared, transparent, underlined only.
 
 The asterisk (`*`) is the recurring glyph: set in Fraunces, clay or gold, used as a brand mark after the wordmark, as a rotating stamp, and as an oversized watermark in the invitation band.
 

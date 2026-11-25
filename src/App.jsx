@@ -26,9 +26,12 @@ export default function App() {
 
   return (
     <SmoothScroll>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <ScrollProgress />
       <SiteHeader />
-      <main className="site-main">
+      <main className="site-main" id="main-content" tabIndex={-1}>
         <div className="page-shell" key={location.pathname}>
           <Routes>
             <Route path="/" element={<Home />} />

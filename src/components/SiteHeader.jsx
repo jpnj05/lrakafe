@@ -52,6 +52,8 @@ export default function SiteHeader() {
               type="button"
               className="menu-toggle"
               aria-label="Open menu"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
               onClick={() => setOpen(true)}
             >
               <span className="menu-toggle-bars" aria-hidden="true">
@@ -64,6 +66,7 @@ export default function SiteHeader() {
       </header>
 
       <Offcanvas
+        id="mobile-menu"
         show={open}
         onHide={() => setOpen(false)}
         placement="end"

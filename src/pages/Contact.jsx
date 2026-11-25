@@ -91,6 +91,7 @@ export default function Contact() {
                       <Form.Control
                         type="text"
                         name="name"
+                        autoComplete="name"
                         placeholder="Your name"
                         required
                       />
@@ -102,6 +103,7 @@ export default function Contact() {
                       <Form.Control
                         type="email"
                         name="email"
+                        autoComplete="email"
                         placeholder="you@email.com"
                         required
                       />
