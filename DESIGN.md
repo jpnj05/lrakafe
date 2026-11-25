@@ -39,12 +39,155 @@ typography:
     letterSpacing: "0em"
   label:
     fontFamily: "Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif"
-    fontSize: "0.68rem"
+    fontSize: "0.72rem"
     fontWeight: 700
     lineHeight: 1.4
     letterSpacing: "0.28em"
+  micro:
+    fontFamily: "Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    fontSize: "0.78rem"
+    lineHeight: 1.5
+  caption:
+    fontFamily: "Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    fontSize: "0.86rem"
+    lineHeight: 1.6
+  meta:
+    fontFamily: "Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    fontSize: "0.92rem"
+    lineHeight: 1.65
+  body-lg:
+    fontFamily: "Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    fontSize: "1.08rem"
+    lineHeight: 1.6
+  lead:
+    fontFamily: "Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    fontSize: "1.15rem"
+    lineHeight: 1.55
+  title-lg:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "1.35rem"
+    fontWeight: 400
+    lineHeight: 1.2
+  heading-xs:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "1.5rem"
+    fontWeight: 400
+    lineHeight: 1.15
+  heading-sm:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "1.7rem"
+    fontWeight: 400
+    lineHeight: 1.1
+  heading:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "1.8rem"
+    fontWeight: 400
+    lineHeight: 1.08
+  heading-lg:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "1.9rem"
+    fontWeight: 400
+    lineHeight: 1.05
+  display-2xs:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "2rem"
+    fontWeight: 400
+    lineHeight: 1.05
+  display-xs:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "2.2rem"
+    fontWeight: 400
+    lineHeight: 1.04
+  display-sm:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "2.4rem"
+    fontWeight: 400
+    lineHeight: 1.02
+  display-md:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "2.8rem"
+    fontWeight: 400
+    lineHeight: 1
+  display-lg:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "3.2rem"
+    fontWeight: 400
+    lineHeight: 0.98
+  display-xl:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "3.4rem"
+    fontWeight: 400
+    lineHeight: 0.96
+  hero-display:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(2.8rem, 10vw, 4.4rem)"
+    fontWeight: 400
+    lineHeight: 0.95
+  page-display:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(2.4rem, 5.8vw, 4.9rem)"
+    fontWeight: 400
+    lineHeight: 1
+  invite-display:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(2.4rem, 6vw, 4.8rem)"
+    fontWeight: 400
+    lineHeight: 1
+  detail-display:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(2.1rem, 4vw, 3.5rem)"
+    fontWeight: 400
+    lineHeight: 1.02
+  quote:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(1.5rem, 3.2vw, 2.7rem)"
+    fontWeight: 400
+    lineHeight: 1.18
+  mobile-link:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(2rem, 7vw, 2.5rem)"
+    fontWeight: 400
+    lineHeight: 1.1
+  brand:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(1.4rem, 2vw, 1.65rem)"
+    fontWeight: 400
+    lineHeight: 1.1
+  card-title:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(1.1rem, 1.4vw, 1.28rem)"
+    fontWeight: 400
+    lineHeight: 1.2
+  info-body:
+    fontFamily: "Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    fontSize: "clamp(1.05rem, 1.5vw, 1.2rem)"
+    lineHeight: 1.55
+  belief-title:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(1.15rem, 1.7vw, 1.4rem)"
+    fontWeight: 400
+    lineHeight: 1.15
+  stat:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "1.55rem"
+    fontWeight: 400
+    lineHeight: 1.1
+  stamp:
+    fontFamily: "Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif"
+    fontSize: "10px"
+    fontWeight: 700
+    letterSpacing: "0.2em"
+  watermark:
+    fontFamily: "Fraunces, 'Times New Roman', Georgia, serif"
+    fontSize: "clamp(16rem, 34vw, 30rem)"
+    fontWeight: 400
+    lineHeight: 1
 rounded:
+  field: "12px"
+  badge: "18px"
   media: "22px"
+  menu: "24px"
+  arch-inner: "26px"
   card: "28px"
   arch: "300px 300px 26px 26px"
   pill: "999px"
@@ -145,16 +288,19 @@ A toasted, low-chroma palette: dark roasted browns against cream paper, with ter
 **Character:** A high-contrast old-style serif with a slightly wonky personality against a neutral geometric sans. The serif carries voice — headlines, numbers, pull quotes, prices; the sans carries instructions, labels and paragraphs, so the page never turns into a magazine pastiche.
 
 ### Hierarchy
-- **Display** (400, clamp(2.9rem, 6.4vw, 6rem), 0.93): hero only, two lines, tight tracking. Italic clay on the final word.
-- **Headline** (400, clamp(2.1rem, 4.2vw, 3.7rem), 1.02): section headings, max ~20 characters per line, revealed word by word from a clipped baseline.
-- **Title** (400, 0.9–1.4rem, 1.2): product names, card titles, spec values, owner names.
-- **Body** (400, 0.87–1.08rem, 1.65): running copy in Bark, capped near 48–52ch for comfort. Never full-bleed line lengths.
-- **Label** (700, 0.6–0.72rem, 0.16–0.28em, uppercase): eyebrows, navigation, buttons, badges, tasting notes, table headers.
+- **Display** (400, clamp(2.8rem, 10vw, 4.4rem), 0.95): home hero only, two lines, tight tracking. Italic clay on the final word.
+- **Page display** (400, clamp(2.4rem, 5.8vw, 4.9rem), 1): route titles and the invitation band, revealed word by word from a clipped baseline.
+- **Headline** (400, clamp(2.1rem, 4.2vw, 3.7rem), 1.02): section headings, max ~20 characters per line.
+- **Title** (400, 1.1–1.4rem, 1.2): product names, card titles, spec values, owner names, belief headings.
+- **Body** (400, 0.86–1.2rem, 1.55–1.65): running copy in Bark, capped near 48–52ch for comfort. Never full-bleed line lengths.
+- **Label** (700, 0.72rem, 0.28em, uppercase): eyebrows, navigation, buttons, badges, tasting notes, table headers. Eyebrows sit one step up at 0.75rem.
+
+The frontmatter carries every step the components actually use, including the fluid clamps each display role resolves to, so a literal size in CSS should match one of those tokens rather than introducing a new one.
 
 ### Named Rules
 **The Italic Turn Rule.** Exactly one word per heading is italic and clay. If the heading has no natural turn, use none.
 
-**The Caps-Sparingly Rule.** Uppercase exists only at label scale (≤0.72rem) with ≥0.14em tracking. Never set a sentence in caps.
+**The Caps-Sparingly Rule.** Uppercase exists only at label scale (≤0.75rem) with ≥0.14em tracking. Never set a sentence in caps.
 
 ## Layout
 
@@ -177,7 +323,7 @@ Two long, soft, low-opacity shadows are allowed, both attached to photography ra
 
 ## Shapes
 
-Form language is **soft and edible**: pills for anything actionable (999px), 22px for imagery, 26–28px for panels and the map card, and a single architectural arch (`300px 300px 26px 26px`) reserved for the hero photograph. Inputs break the pattern deliberately — squared, transparent, underlined only.
+Form language is **soft and edible**: pills for anything actionable (999px), 22px for imagery, 26–28px for panels and the map card, and a single architectural arch (`300px 300px 26px 26px`) reserved for the hero photograph. The smaller steps are 12px for inline alerts, 18px for badges, tags and map pins, and 24px for the mobile drawer. Inputs break the pattern deliberately — squared, transparent, underlined only.
 
 The asterisk (`*`) is the recurring glyph: set in Fraunces, clay or gold, used as a brand mark after the wordmark, as a rotating stamp, and as an oversized watermark in the invitation band.
 
@@ -220,7 +366,7 @@ The asterisk (`*`) is the recurring glyph: set in Fraunces, clay or gold, used a
 - **Do** keep the page base on Cream Paper (#f7efe2) and reserve espresso for full-bleed bands and primary buttons.
 - **Do** set headlines in Fraunces at weight 400 with −0.025em or tighter tracking, and italicise at most one clay word.
 - **Do** separate sections with tonal change and 1px hairlines at `rgba(91, 60, 42, 0.18)` rather than cards with borders.
-- **Do** cap body copy near 48–52ch and keep labels uppercase at ≤0.72rem with ≥0.14em tracking.
+- **Do** cap body copy near 48–52ch and keep labels uppercase at ≤0.75rem with ≥0.14em tracking.
 - **Do** use 999px pills for actions and 22–28px radii for surfaces, and keep the arch radius unique to the hero photograph.
 - **Do** grade photography warm (amber, brown, cream) and let it carry the saturation the interface refuses.
 
