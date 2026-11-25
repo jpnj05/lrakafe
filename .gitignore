@@ -13,3 +13,6 @@ npm-debug.log*
 .idea
 .cloud-attachments
 .freebuff
+
+# Agent tooling (vendor skills locally, not in the repo)
+.claude/
