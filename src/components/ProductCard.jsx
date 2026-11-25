@@ -20,7 +20,9 @@ export default function ProductCard({ product, headingLevel = 3 }) {
           <Heading>
             <Link to={`/shop/${product.slug}`}>{product.name}</Link>
           </Heading>
-          <span className="price">₱{product.price}</span>
+          <span className="price">
+            <span className="price-from">from</span> ₱{product.price}
+          </span>
         </div>
         <p className="product-short">{product.short}</p>
         <ul className="note-list">
