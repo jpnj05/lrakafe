@@ -59,7 +59,7 @@ export default function About() {
               height="880"
               loading="lazy"
             />
-            <span className="about-media-tag">The first table, 2021</span>
+            <span className="about-media-tag">The first table, 2026</span>
           </Reveal>
 
           <div className="about-copy">

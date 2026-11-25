@@ -155,7 +155,7 @@ export default function Home() {
       <section className="hero" ref={heroRef}>
         <div className="container-lra hero-inner">
           <div className="hero-copy">
-            <span className="eyebrow hero-eyebrow">LraKafe · Jaro, Iloilo · Est. 2021</span>
+            <span className="eyebrow hero-eyebrow">LraKafe · Jaro, Iloilo · Est. 2026</span>
 
             <h1 className="hero-title">
               <span className="line">
@@ -319,11 +319,11 @@ export default function Home() {
                 We still roast in small batches, still write the day’s beans on
                 the mirror, and still believe a cafe should feel more like a
                 friend’s kitchen than a showroom. The corner seats are the same
-                ones we fought over in 2021.
+                ones we fought over on opening day.
               </p>
               <div className="story-stats">
                 <div>
-                  <strong>2021</strong>
+                  <strong>2026</strong>
                   <span>First fold-out table</span>
                 </div>
                 <div>
@@ -405,7 +405,7 @@ export default function Home() {
               plan. I came for a latte and stayed for three hours — twice this
               week.”
             </p>
-            <span className="quote-person">Maris E. · regular since 2022</span>
+            <span className="quote-person">Maris E. · regular since opening</span>
           </Reveal>
         </div>
       </section>

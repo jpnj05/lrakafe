@@ -48,7 +48,7 @@ This is a coursework storefront demo, not a live commerce system:
 - **Name:** LraKafe — capital L, capital K, one word, set in the display serif with a clay-colored asterisk after it.
 - **Voice:** warm, specific, lightly wry, unpretentious. Concrete nouns over adjectives; never luxury-speak or hard-sell. Filipino terms are used naturally, without italics or translation.
 - **Owners (named, do not change):** Nizon Jeorgie I. Pison II (founder, head roaster), Karl Joseph Opial (co-founder, creative director), Sam Robert B. Susvilla (co-founder, operations lead).
-- **Story facts:** founded 2021 in a rented room on Luna Street, Jaro; started as a fold-out table between three IT students; name comes from slurring their initials together.
+- **Story facts:** founded 2026 in a rented room on Luna Street, Jaro; started as a fold-out table between three IT students; name comes from slurring their initials together.
 - **Signature line:** "Slow coffee, warm corners."
 
 ## Evidence on Hand
