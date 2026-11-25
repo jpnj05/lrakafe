@@ -15,7 +15,7 @@ Two audiences, both factual to this project:
 
 ## Product Purpose
 
-LraKafe is the online storefront of a fictional small-batch coffee shop in Jaro, Iloilo City. It exists to make the shop's point of view legible before someone walks in: six drinks explained with real tasting notes, the three owners introduced by name, and the address, hours and contact details in one place.
+LraKafe is the online storefront of a fictional small-batch coffee shop in Jaro, Iloilo City. It exists to make the shop's point of view legible before someone walks in: nine drinks explained with real tasting notes, the three owners introduced by name, and the address, hours and contact details in one place.
 
 Success means a visitor can go from the hero to a specific drink in two clicks, and can tell what kind of room this is without reading a mission statement.
 
@@ -28,7 +28,7 @@ A neighbourhood coffee bar whose menu is cooked as well as brewed — house-made
 This is a coursework storefront demo, not a live commerce system:
 
 - Runs locally with Vite; deployed only as static files.
-- Six drinks across four categories, stored as static data in `src/data/products.js`.
+- Nine drinks across five categories, stored as static data in `src/data/products.js`.
 - No cart, checkout, account, payment or backend. "Add to cart" is layout-only and intentionally inert.
 - The contact form validates in the browser and stops at a confirmation message; nothing is sent.
 - Address, phone number, email and hours are hypothetical, written for the brief.
@@ -55,7 +55,7 @@ This is a coursework storefront demo, not a live commerce system:
 
 - Full menu copy, tasting notes, origins and drink descriptions in `src/data/products.js`.
 - Owner bios and the shop story in `src/pages/About.jsx`; shop copy in `src/pages/Home.jsx`.
-- Nine generated photographs in `public/images/` (interior, latte, barista, six drinks).
+- Twelve generated photographs in `public/images/` (interior, latte, barista, nine drinks).
 - The testimonial attributed to "Maris E." is invented for the layout. It is not a real customer quote, and future work must not present it as one.
 - No press, awards, reviews, sales figures, certifications or supplier contracts exist. Do not invent them.
 

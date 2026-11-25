@@ -39,7 +39,9 @@ export default function Product() {
                 width="1024"
                 height="1024"
               />
-              <span className="detail-badge">{product.roast} roast</span>
+              <span className="detail-badge">
+                {product.badge ?? `${product.roast} roast`}
+              </span>
             </Reveal>
 
             <Reveal className="detail-info" selector=".detail-in" stagger={0.08}>

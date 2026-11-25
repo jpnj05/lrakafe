@@ -263,7 +263,7 @@ export default function Home() {
 
           <Reveal className="featured-foot" delay={0.1}>
             <p>
-              Six drinks on the menu, twelve beans behind the bar. The baristas
+              Nine drinks on the menu, twelve beans behind the bar. The baristas
               will happily talk you out of the sweetest option.
             </p>
             <Magnetic>

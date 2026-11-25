@@ -35,7 +35,7 @@ export default function Shop() {
     <>
       <PageIntro
         eyebrow="The menu"
-        title="Six drinks, twelve *beans*, no rush."
+        title="Nine drinks, twelve *beans*, no rush."
         lede="Everything is pulled to order. Pick a cup, read the notes, and pretend you already know what a cortado is."
       />
 
