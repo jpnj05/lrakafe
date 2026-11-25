@@ -129,7 +129,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section-dark about-beliefs">
+      <section className="section section--dark about-beliefs">
         <div className="container-lra">
           <div className="section-head">
             <div>
