@@ -6,14 +6,13 @@ import Reveal from '../components/Reveal'
 import { getProduct, products } from '../data/products'
 import NotFound from './NotFound'
 
-const defaultSizes = ['12 oz', '16 oz', 'Iced']
-
 export default function Product() {
   const { slug } = useParams()
   const product = getProduct(slug)
-  const sizes = product?.sizes ?? defaultSizes
+  const sizes = product?.sizes ?? []
   const [chosenSize, setChosenSize] = useState(null)
-  const size = sizes.includes(chosenSize) ? chosenSize : sizes[0]
+  const size =
+    sizes.find((option) => option.label === chosenSize) ?? sizes[0]
 
   if (!product) return <NotFound />
 
@@ -54,7 +53,7 @@ export default function Product() {
               <p className="detail-tagline detail-in">{product.tagline}</p>
 
               <div className="detail-price detail-in">
-                ₱{product.price} <span>/ {size}</span>
+                ₱{size.price} <span>/ {size.label}</span>
               </div>
 
               <p className="detail-desc detail-in">{product.description}</p>
@@ -68,13 +67,13 @@ export default function Product() {
               <div className="size-row detail-in" role="group" aria-label="Chosen size">
                 {sizes.map((option) => (
                   <button
-                    key={option}
+                    key={option.label}
                     type="button"
-                    className={`filter-chip${size === option ? ' is-active' : ''}`}
-                    aria-pressed={size === option}
-                    onClick={() => setChosenSize(option)}
+                    className={`filter-chip${size.label === option.label ? ' is-active' : ''}`}
+                    aria-pressed={size.label === option.label}
+                    onClick={() => setChosenSize(option.label)}
                   >
-                    {option}
+                    {option.label}
                   </button>
                 ))}
               </div>
