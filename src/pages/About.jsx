@@ -90,7 +90,7 @@ export default function About() {
                 correctly and we liked that.
               </p>
               <p>
-                Five years later the table is a proper bar, the grinder has been
+                The fold-out table has become a proper bar, the grinder has been
                 retired to the shelf, and the same three of us still close up on
                 Saturdays. The coffee got better. The reason stayed the same.
               </p>
