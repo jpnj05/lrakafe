@@ -73,8 +73,8 @@ export default function About() {
             />
             <Reveal selector="p" stagger={0.1}>
               <p>
-                The three of us were finishing our IT degree at the University of
-                San Agustin and kept losing our study table to the rain. The
+                The three of us were studying IT at the University of San
+                Agustin and kept losing our study table to the rain. The
                 campus cafes closed at six; the ones that stayed open served
                 coffee we drank out of politeness. So we pooled our allowance,
                 bought a secondhand grinder from a barista who was leaving the
