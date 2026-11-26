@@ -276,7 +276,12 @@ A toasted, low-chroma palette: dark roasted browns against cream paper, with ter
 - **Bark** (#5b3c2a): secondary text, labels, captions, hairline colour at 18% alpha.
 - **Near-Black Ink** (#1d110a): footer ground; used nowhere else.
 
+### Tints
+Alpha tints are mixed from the base tokens rather than written as raw `rgba()` values. An alpha that repeats across rules gets a named step, such as `--bark-08`; a one-off is mixed where it is used, as in `color-mix(in srgb, var(--cream) 64%, transparent)`. Changing a base colour re-tints every hairline, wash, glow and shadow derived from it.
+
 ### Named Rules
+**The Tint Rule.** Every translucent surface derives from one of the seven base tokens; a literal `rgba()` never appears in a declaration.
+
 **The Cream Margin Rule.** Every dark panel is a band inside cream, never the page itself. The page always begins and ends in cream paper.
 
 **The Clay Rarity Rule.** Clay and gold together stay under ~10% of any viewport. Their scarcity is what makes them read as brand.
@@ -293,10 +298,10 @@ A toasted, low-chroma palette: dark roasted browns against cream paper, with ter
 - **Page display** (400, clamp(2.4rem, 5.8vw, 4.9rem), 1): route titles and the invitation band, revealed word by word from a clipped baseline.
 - **Headline** (400, clamp(2.1rem, 4.2vw, 3.7rem), 1.02): section headings, max ~20 characters per line.
 - **Title** (400, 1.1–1.4rem, 1.2): product names, card titles, spec values, owner names, belief headings.
-- **Body** (400, 0.86–1.2rem, 1.55–1.65): running copy in Bark, capped near 48–52ch for comfort. Never full-bleed line lengths.
+- **Body** (400, 1rem reading / 0.92rem secondary / 0.86rem meta, 1.55–1.65): running copy in Bark, capped near 48–52ch for comfort. Never full-bleed line lengths, and never below 1rem for paragraphs meant to be read.
 - **Label** (700, 0.72rem, 0.28em, uppercase): eyebrows, navigation, buttons, badges, tasting notes, table headers. Eyebrows sit one step up at 0.75rem.
 
-The frontmatter carries every step the components actually use, including the fluid clamps each display role resolves to, so a literal size in CSS should match one of those tokens rather than introducing a new one.
+The frontmatter carries every step the components actually use, including the fluid clamps each display role resolves to, so a literal size in CSS should match one of those tokens rather than introducing a new one. Headings balance their lines with `text-wrap: balance`; running copy uses `text-wrap: pretty`.
 
 ### Named Rules
 **The Italic Turn Rule.** Exactly one word per heading is italic and clay. If the heading has no natural turn, use none.

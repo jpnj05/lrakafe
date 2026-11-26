@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Col, Row } from 'react-bootstrap'
 import ProductCard from '../components/ProductCard'
+import ResponsiveImage from '../components/ResponsiveImage'
 import Reveal from '../components/Reveal'
 import { getProduct, products } from '../data/products'
 import NotFound from './NotFound'
@@ -34,8 +35,10 @@ export default function Product() {
 
           <div className="product-detail">
             <Reveal className="detail-media">
-              <img
+              <ResponsiveImage
                 src={product.image}
+                widths={[512, 1024]}
+                sizes="(min-width: 992px) 46vw, 92vw"
                 alt={product.name}
                 width="1024"
                 height="1024"

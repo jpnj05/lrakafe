@@ -35,8 +35,8 @@ export default function SiteFooter() {
 
           <div className="footer-col">
             <h3>Open daily</h3>
-            <p>Mon — Thu · 7 AM – 10 PM</p>
-            <p>Fri — Sat · 7 AM – 12 MN</p>
+            <p>Mon – Thu · 7 AM – 10 PM</p>
+            <p>Fri – Sat · 7 AM – 12 MN</p>
             <p>Sunday · 8 AM – 9 PM</p>
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
               Instagram ↗

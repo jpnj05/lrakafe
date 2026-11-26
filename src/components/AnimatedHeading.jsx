@@ -1,16 +1,43 @@
-import { useRef } from 'react'
+import { Fragment, useRef } from 'react'
 import { gsap, useGSAP } from '../lib/gsap'
 import { prefersReducedMotion } from '../lib/motion'
 
-function tokenize(text) {
-  return text.split(' ').filter(Boolean).map((raw, index) => {
-    const accent = raw.startsWith('*') && raw.endsWith('*') && raw.length > 2
-    return {
-      id: `${raw}-${index}`,
-      text: accent ? raw.slice(1, -1) : raw,
-      accent,
+/*
+ * Splits copy into words, honouring `*accent*` markers across any number of
+ * words and around punctuation (`*beans*,` accents only "beans"). Each word
+ * keeps its segments so punctuation can stay roman next to an italic phrase.
+ */
+function parseWords(text) {
+  const words = []
+  let segments = null
+  let accent = false
+
+  for (const char of text) {
+    if (char === '*') {
+      accent = !accent
+      continue
     }
-  })
+
+    if (/\s/.test(char)) {
+      segments = null
+      continue
+    }
+
+    if (!segments) {
+      segments = []
+      words.push(segments)
+    }
+
+    const last = segments[segments.length - 1]
+
+    if (last && last.accent === accent) {
+      last.text += char
+    } else {
+      segments.push({ text: char, accent })
+    }
+  }
+
+  return words
 }
 
 export default function AnimatedHeading({
@@ -21,6 +48,7 @@ export default function AnimatedHeading({
   start = 'top 85%',
 }) {
   const ref = useRef(null)
+  const words = parseWords(text)
 
   useGSAP(() => {
     if (prefersReducedMotion()) return
@@ -42,13 +70,22 @@ export default function AnimatedHeading({
 
   return (
     <Tag ref={ref} className={`animated-heading ${className}`.trim()}>
-      {tokenize(text).map((word) => (
-        <span
-          key={word.id}
-          className={`word${word.accent ? ' is-accent' : ''}`}
-        >
-          <span className="word-inner">{word.text}</span>
-        </span>
+      {words.map((segments, wordIndex) => (
+        <Fragment key={`${segments[0].text}-${wordIndex}`}>
+          {wordIndex > 0 ? ' ' : null}
+          <span className="word">
+            <span className="word-inner">
+              {segments.map((segment, segmentIndex) => (
+                <span
+                  key={`${segment.text}-${segmentIndex}`}
+                  className={segment.accent ? 'accent' : undefined}
+                >
+                  {segment.text}
+                </span>
+              ))}
+            </span>
+          </span>
+        </Fragment>
       ))}
     </Tag>
   )

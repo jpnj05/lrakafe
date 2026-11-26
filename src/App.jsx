@@ -4,6 +4,7 @@ import SmoothScroll from './components/SmoothScroll'
 import ScrollProgress from './components/ScrollProgress'
 import SiteHeader from './components/SiteHeader'
 import SiteFooter from './components/SiteFooter'
+import RouteMeta from './components/RouteMeta'
 import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Product from './pages/Product'
@@ -26,6 +27,7 @@ export default function App() {
 
   return (
     <SmoothScroll>
+      <RouteMeta />
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>

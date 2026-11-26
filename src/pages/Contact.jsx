@@ -2,11 +2,12 @@ import { useState } from 'react'
 import { Alert, Col, Form, Row } from 'react-bootstrap'
 import Magnetic from '../components/Magnetic'
 import PageIntro from '../components/PageIntro'
+import ResponsiveImage from '../components/ResponsiveImage'
 import Reveal from '../components/Reveal'
 
 const hours = [
-  ['Monday — Thursday', '7:00 AM – 10:00 PM'],
-  ['Friday — Saturday', '7:00 AM – 12:00 MN'],
+  ['Monday to Thursday', '7:00 AM – 10:00 PM'],
+  ['Friday to Saturday', '7:00 AM – 12:00 MN'],
   ['Sunday', '8:00 AM – 9:00 PM'],
 ]
 
@@ -23,7 +24,7 @@ export default function Contact() {
       <PageIntro
         eyebrow="Contact Us"
         title="Come sit with us, or *write* first."
-        lede="We are two doors down from the old Jaro plaza. If the brass lamps are on, we are open — and the corner seat is probably still free."
+        lede="We are two doors down from the old Jaro plaza. If the brass lamps are on, we are open, and the corner seat is probably still free."
       />
 
       <section className="section section-contact">
@@ -73,13 +74,13 @@ export default function Contact() {
               <h2 className="display-sm">Drop us a note</h2>
               <p className="form-lede">
                 Catering, wholesale beans, a lost umbrella, or a drink you wish
-                we made — it all lands in the same inbox.
+                we made. It all lands in the same inbox.
               </p>
 
               {sent && (
                 <Alert variant="success" className="form-alert">
                   Salamat! Your note is in our inbox. We usually reply within a
-                  day — sooner if it is about coffee.
+                  day, sooner if it is about coffee.
                 </Alert>
               )}
 
@@ -148,12 +149,13 @@ export default function Contact() {
 
         <div className="container-lra">
           <Reveal className="map-card">
-            <img
+            <ResponsiveImage
               src="/images/hero-interior.jpg"
+              widths={[640, 960, 1392]}
+              sizes="(min-width: 1200px) 1140px, 92vw"
               alt="The street-side window of LraKafe in Jaro"
               width="1392"
               height="752"
-              loading="lazy"
             />
             <span className="map-pin" aria-hidden="true">
               <span />

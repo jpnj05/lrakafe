@@ -8,7 +8,7 @@ export const products = [
     short: 'Double ristretto, steamed carabao milk, a whisper of muscovado.',
     tagline: 'The cup we built the room around.',
     description:
-      'Two ristretto shots pulled from our house Bukidnon blend, folded into carabao milk and sweetened with muscovado syrup we cook every Tuesday. It lands soft and toasty — the kind of cup that makes a rainy Iloilo afternoon feel intentional.',
+      'Two ristretto shots pulled from our house Bukidnon blend, folded into carabao milk and sweetened with muscovado syrup we cook every Tuesday. It lands soft and toasty, the kind of cup that makes a rainy Iloilo afternoon feel intentional.',
     notes: ['Muscovado', 'Toasted hazelnut', 'Carabao milk'],
     roast: 'Medium-dark',
     origin: 'Mt. Kitanglad, Bukidnon',
@@ -122,7 +122,7 @@ export const products = [
     short: 'Single-origin chocolate, green cardamom, espresso.',
     tagline: 'A little spice to slow you down.',
     description:
-      'Sixty-percent Davao cacao melted into milk with three cracked cardamom pods, then pulled together with a double shot. Rich without being heavy — our late-afternoon regular.',
+      'Sixty-percent Davao cacao melted into milk with three cracked cardamom pods, then pulled together with a double shot. Rich without being heavy: our late-afternoon regular.',
     notes: ['Davao cacao', 'Green cardamom', 'Molasses'],
     roast: 'Dark',
     origin: 'Davao cacao · Benguet coffee',
@@ -145,7 +145,7 @@ export const products = [
     short: 'Ceremonial matcha poured over strawberry compote and cold milk.',
     tagline: 'Three layers, one spoon.',
     description:
-      'We spoon our own strawberry compote into the glass, add cold fresh milk and ice, then pour a whisked bowl of ceremonial matcha on top. Drink it in layers first, then stir — it goes from jammy to grassy in one turn of the spoon.',
+      'We spoon our own strawberry compote into the glass, add cold fresh milk and ice, then pour a whisked bowl of ceremonial matcha on top. Drink it in layers first, then stir. It goes from jammy to grassy in one turn of the spoon.',
     notes: ['Strawberry compote', 'Ceremonial matcha', 'Fresh milk'],
     roast: 'Unroasted',
     badge: 'Ceremonial grade',

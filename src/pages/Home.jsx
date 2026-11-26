@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import AnimatedHeading from '../components/AnimatedHeading'
 import Magnetic from '../components/Magnetic'
 import ProductCard from '../components/ProductCard'
+import ResponsiveImage from '../components/ResponsiveImage'
 import Reveal from '../components/Reveal'
 import { products } from '../data/products'
 import { gsap, useGSAP } from '../lib/gsap'
@@ -21,7 +22,7 @@ const steps = [
   },
   {
     title: 'Stay a while',
-    copy: 'Take the corner seat. Refills on brewed coffee are half price after the first cup — that is the whole business plan.',
+    copy: 'Take the corner seat. Refills on brewed coffee are half price after the first cup. That is the whole business plan.',
   },
 ]
 
@@ -34,7 +35,7 @@ const values = [
   {
     index: '02',
     title: 'Syrups from our kitchen',
-    copy: 'Muscovado, pandan, burnt honey, ube — cooked in-house in small pots, never from a pump bottle.',
+    copy: 'Muscovado, pandan, burnt honey, ube, cooked in-house in small pots, never from a pump bottle.',
   },
   {
     index: '03',
@@ -71,7 +72,7 @@ export default function Home() {
       yPercent: 9,
       ease: 'none',
       scrollTrigger: {
-        trigger: '.hero',
+        trigger: heroRef.current,
         start: 'top top',
         end: 'bottom top',
         scrub: true,
@@ -83,7 +84,7 @@ export default function Home() {
       autoAlpha: 0.18,
       ease: 'none',
       scrollTrigger: {
-        trigger: '.hero',
+        trigger: heroRef.current,
         start: 'top top',
         end: 'bottom top',
         scrub: true,
@@ -155,7 +156,9 @@ export default function Home() {
       <section className="hero" ref={heroRef}>
         <div className="container-lra hero-inner">
           <div className="hero-copy">
-            <span className="eyebrow hero-eyebrow">LraKafe · Jaro, Iloilo · Est. 2026</span>
+            <span className="eyebrow hero-eyebrow">
+              LraKafe · Jaro, Iloilo · <span className="nowrap">Est. 2026</span>
+            </span>
 
             <h1 className="hero-title">
               <span className="line">
@@ -204,11 +207,14 @@ export default function Home() {
 
           <div className="hero-visual">
             <figure className="hero-frame">
-              <img
+              <ResponsiveImage
                 src="/images/hero-interior.jpg"
+                widths={[640, 960, 1392]}
+                sizes="(min-width: 992px) 560px, 92vw"
                 alt="The LraKafe counter, lit by warm brass pendants"
                 width="1392"
                 height="752"
+                priority
               />
             </figure>
 
@@ -280,12 +286,13 @@ export default function Home() {
         <div className="container-lra story-grid">
           <Reveal className="story-media-wrap">
             <figure className="story-media">
-              <img
+              <ResponsiveImage
                 src="/images/about-barista.jpg"
+                widths={[440, 880]}
+                sizes="(min-width: 992px) 44vw, 92vw"
                 alt="A barista tamping coffee into a portafilter"
                 width="880"
                 height="1184"
-                loading="lazy"
               />
               <figcaption className="story-quote-card">
                 <span className="quote-mark" aria-hidden="true">
@@ -354,7 +361,7 @@ export default function Home() {
             />
             <p>
               No drive-through, no autopilot. This is what happens between your
-              order and your first sip — every single time.
+              order and your first sip, every single time.
             </p>
           </div>
 
@@ -402,10 +409,10 @@ export default function Home() {
           <Reveal className="quote-block">
             <p className="quote-body">
               “LraKafe is the kind of place that makes you cancel your next
-              plan. I came for a latte and stayed for three hours — twice this
+              plan. I came for a latte and stayed for three hours. Twice this
               week.”
             </p>
-            <span className="quote-person">Maris E. · regular since opening</span>
+            <span className="quote-person">Nicholas E. · regular since opening</span>
           </Reveal>
         </div>
       </section>

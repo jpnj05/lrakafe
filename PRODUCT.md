@@ -56,7 +56,7 @@ This is a coursework storefront demo, not a live commerce system:
 - Full menu copy, tasting notes, origins and drink descriptions in `src/data/products.js`.
 - Owner bios and the shop story in `src/pages/About.jsx`; shop copy in `src/pages/Home.jsx`.
 - Twelve generated photographs in `public/images/` (interior, latte, barista, nine drinks).
-- The testimonial attributed to "Maris E." is invented for the layout. It is not a real customer quote, and future work must not present it as one.
+- The testimonial attributed to "Nicholas E." is invented for the layout. It is not a real customer quote, and future work must not present it as one.
 - No press, awards, reviews, sales figures, certifications or supplier contracts exist. Do not invent them.
 
 ## Product Principles

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import ResponsiveImage from './ResponsiveImage'
 
 export default function ProductCard({ product, headingLevel = 3 }) {
   const Heading = `h${headingLevel}`
@@ -11,7 +12,14 @@ export default function ProductCard({ product, headingLevel = 3 }) {
         className="product-media"
         aria-label={`View ${product.name}`}
       >
-        <img src={product.image} alt={product.name} loading="lazy" width="1024" height="1024" />
+        <ResponsiveImage
+          src={product.image}
+          widths={[512, 1024]}
+          sizes="(min-width: 1200px) 360px, (min-width: 992px) 30vw, (min-width: 576px) 46vw, 92vw"
+          alt={product.name}
+          width="1024"
+          height="1024"
+        />
         <span className="product-badge">{product.category}</span>
         <span className="product-view">View the cup</span>
       </Link>

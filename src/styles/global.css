@@ -1,5 +1,5 @@
 /* =========================================================
-   LraKafe — warm editorial design system
+   LraKafe · warm editorial design system
    ========================================================= */
 
 :root {
@@ -20,7 +20,11 @@
 
   --max: 1240px;
   --ease: cubic-bezier(0.22, 0.7, 0.28, 1);
-  --hairline: rgba(91, 60, 42, 0.18);
+  /* alpha tints mixed from the palette tokens (see DESIGN.md, Tints) */
+  --bark-08: color-mix(in srgb, var(--bark) 8%, transparent);
+  --cream-62: color-mix(in srgb, var(--cream) 62%, transparent);
+  --cream-70: color-mix(in srgb, var(--cream) 70%, transparent);
+  --hairline: color-mix(in srgb, var(--bark) 18%, transparent);
 }
 
 * {
@@ -73,6 +77,10 @@ img {
   display: block;
 }
 
+picture {
+  display: contents;
+}
+
 h1,
 h2,
 h3,
@@ -84,6 +92,7 @@ h5 {
   letter-spacing: -0.025em;
   color: var(--espresso);
   margin: 0;
+  text-wrap: balance;
 }
 
 p {
@@ -132,7 +141,7 @@ a {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 0 16px 30px -18px rgba(43, 26, 18, 0.6);
+  box-shadow: 0 16px 30px -18px color-mix(in srgb, var(--espresso) 60%, transparent);
   transform: translateY(-160%);
   transition: transform 0.25s var(--ease);
 }
@@ -186,7 +195,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--clay-deep);
+  color: var(--clay-ink);
 }
 
 .eyebrow::before {
@@ -223,7 +232,7 @@ a {
 
 .section-aside {
   max-width: 32ch;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--bark);
   margin: 0;
 }
@@ -238,16 +247,11 @@ a {
   margin-bottom: -0.06em;
 }
 
-.animated-heading .word + .word {
-  margin-left: 0.24em;
-}
-
 .animated-heading .word-inner {
   display: inline-block;
-  will-change: transform;
 }
 
-.animated-heading .is-accent .word-inner {
+.animated-heading .word-inner .accent {
   font-style: italic;
   color: var(--clay-deep);
 }
@@ -307,7 +311,7 @@ a {
 .btn-lra--ghost {
   background: transparent;
   color: var(--espresso);
-  border-color: rgba(91, 60, 42, 0.45);
+  border-color: color-mix(in srgb, var(--bark) 45%, transparent);
 }
 
 .btn-lra--ghost:hover,
@@ -335,7 +339,7 @@ a {
   padding-bottom: 0.15rem;
   border-bottom: 1px solid currentColor;
   color: var(--espresso);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -358,7 +362,6 @@ a {
 
 .magnetic {
   display: inline-flex;
-  will-change: transform;
 }
 
 /* ------------------------- scroll progress ------------------------- */
@@ -392,10 +395,10 @@ a {
 
 .site-header.is-scrolled {
   padding-block: 0.7rem;
-  background: rgba(252, 247, 238, 0.86);
+  background: color-mix(in srgb, var(--cream-soft) 86%, transparent);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  box-shadow: 0 1px 0 rgba(43, 26, 18, 0.09);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--espresso) 9%, transparent);
 }
 
 .header-inner {
@@ -410,7 +413,7 @@ a {
   align-items: baseline;
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 2vw, 1.65rem);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.04em;
   color: var(--espresso);
   text-decoration: none;
@@ -439,7 +442,7 @@ a {
   position: relative;
   padding-block: 0.35rem;
   color: var(--bark);
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -488,7 +491,7 @@ a {
   width: 44px;
   height: 44px;
   padding: 0;
-  border: 1px solid rgba(91, 60, 42, 0.35);
+  border: 1px solid color-mix(in srgb, var(--bark) 35%, transparent);
   border-radius: 50%;
   background: transparent;
   color: var(--espresso);
@@ -543,7 +546,7 @@ a {
   align-items: baseline;
   gap: 1rem;
   padding-block: 0.55rem;
-  border-bottom: 1px solid rgba(247, 239, 226, 0.12);
+  border-bottom: 1px solid color-mix(in srgb, var(--cream) 12%, transparent);
   color: var(--cream);
   font-family: var(--font-display);
   font-size: clamp(2rem, 7vw, 2.5rem);
@@ -568,7 +571,7 @@ a {
 .mobile-menu-foot {
   margin-top: 2.5rem;
   font-size: 0.78rem;
-  color: rgba(247, 239, 226, 0.6);
+  color: color-mix(in srgb, var(--cream) 60%, transparent);
 }
 
 .mobile-menu-foot p {
@@ -584,6 +587,7 @@ a {
 
 .hero {
   position: relative;
+  min-height: 100svh;
   padding-top: clamp(7.5rem, 14vh, 10.5rem);
   padding-bottom: clamp(1rem, 3vh, 2rem);
   overflow: hidden;
@@ -599,8 +603,8 @@ a {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(215, 165, 85, 0.36),
-    rgba(247, 239, 226, 0) 66%
+    color-mix(in srgb, var(--gold) 36%, transparent),
+    transparent 66%
   );
   pointer-events: none;
 }
@@ -615,8 +619,8 @@ a {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(192, 118, 74, 0.2),
-    rgba(247, 239, 226, 0) 70%
+    color-mix(in srgb, var(--clay) 20%, transparent),
+    transparent 70%
   );
   pointer-events: none;
 }
@@ -630,9 +634,6 @@ a {
   gap: clamp(2rem, 5vw, 4.5rem);
 }
 
-.hero-copy {
-  will-change: transform, opacity;
-}
 
 .hero-title {
   margin-top: 1.6rem;
@@ -660,7 +661,11 @@ a {
   max-width: 34ch;
   margin-top: 1.6rem;
   color: var(--bark);
-  font-size: clamp(0.98rem, 1.1vw, 1.08rem);
+  font-size: clamp(1rem, 1.1vw, 1.08rem);
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .hero-actions {
@@ -710,14 +715,13 @@ a {
   border-radius: 300px 300px 26px 26px;
   overflow: hidden;
   background: var(--sand);
-  box-shadow: 0 40px 70px -46px rgba(43, 26, 18, 0.65);
+  box-shadow: 0 40px 70px -46px color-mix(in srgb, var(--espresso) 65%, transparent);
 }
 
 .hero-frame img {
   width: 100%;
   height: 118%;
   object-fit: cover;
-  will-change: transform;
 }
 
 .hero-stamp {
@@ -730,7 +734,7 @@ a {
   height: 118px;
   border-radius: 50%;
   background: var(--cream-soft);
-  box-shadow: 0 16px 34px -16px rgba(43, 26, 18, 0.45);
+  box-shadow: 0 16px 34px -16px color-mix(in srgb, var(--espresso) 45%, transparent);
 }
 
 .stamp-svg {
@@ -782,7 +786,7 @@ a {
   width: 70px;
   height: 1px;
   overflow: hidden;
-  background: rgba(91, 60, 42, 0.25);
+  background: color-mix(in srgb, var(--bark) 25%, transparent);
 }
 
 .hero-scroll-line::after {
@@ -852,7 +856,7 @@ a {
   left: 0.9rem;
   padding: 0.34rem 0.7rem;
   border-radius: 999px;
-  background: rgba(252, 247, 238, 0.92);
+  background: color-mix(in srgb, var(--cream-soft) 92%, transparent);
   color: var(--bark);
   font-size: 0.72rem;
   font-weight: 700;
@@ -894,15 +898,16 @@ a {
   gap: 1rem;
 }
 
+.product-line h2,
 .product-line h3 {
   font-size: clamp(1.1rem, 1.4vw, 1.28rem);
 }
 
-.product-line h3 a {
+.product-line a {
   text-decoration: none;
 }
 
-.product-line h3 a:hover {
+.product-line a:hover {
   color: var(--clay-deep);
 }
 
@@ -927,7 +932,7 @@ a {
 
 .product-short {
   margin: 0.45rem 0 0.85rem;
-  font-size: 0.87rem;
+  font-size: 0.92rem;
   color: var(--bark);
 }
 
@@ -944,7 +949,7 @@ a {
 .note-list li,
 .detail-notes li {
   padding: 0.26rem 0.6rem;
-  border: 1px solid rgba(91, 60, 42, 0.22);
+  border: 1px solid color-mix(in srgb, var(--bark) 22%, transparent);
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 600;
@@ -969,7 +974,7 @@ a {
 .featured-foot p {
   max-width: 48ch;
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--bark);
 }
 
@@ -977,8 +982,8 @@ a {
 
 .story {
   background: var(--cream-soft);
-  border-top: 1px solid rgba(91, 60, 42, 0.08);
-  border-bottom: 1px solid rgba(91, 60, 42, 0.08);
+  border-top: 1px solid var(--bark-08);
+  border-bottom: 1px solid var(--bark-08);
 }
 
 .story-grid {
@@ -1001,7 +1006,6 @@ a {
   width: 100%;
   height: 122%;
   object-fit: cover;
-  will-change: transform;
 }
 
 .story-quote-card {
@@ -1011,7 +1015,7 @@ a {
   bottom: 1rem;
   padding: 1.2rem 1.3rem;
   border-radius: 18px;
-  background: rgba(252, 247, 238, 0.95);
+  background: color-mix(in srgb, var(--cream-soft) 95%, transparent);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   color: var(--espresso);
@@ -1044,7 +1048,7 @@ a {
 .story-copy p {
   max-width: 48ch;
   color: var(--bark);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .story-copy .link-arrow {
@@ -1066,12 +1070,13 @@ a {
   font-size: 1.55rem;
   font-weight: 400;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .story-stats span {
   display: block;
   margin-top: 0.35rem;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   letter-spacing: 0.05em;
   color: var(--bark);
 }
@@ -1097,7 +1102,7 @@ a {
   width: 60vw;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(192, 118, 74, 0.22), transparent 65%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--clay) 22%, transparent), transparent 65%);
   pointer-events: none;
 }
 
@@ -1114,15 +1119,15 @@ a {
   max-width: 18ch;
 }
 
-.ritual-head .is-accent .word-inner {
+.ritual-head .word-inner .accent {
   color: var(--gold);
 }
 
 .ritual-head p {
   max-width: 38ch;
   margin-top: 1.4rem;
-  font-size: 0.93rem;
-  color: rgba(247, 239, 226, 0.64);
+  font-size: 1rem;
+  color: color-mix(in srgb, var(--cream) 64%, transparent);
 }
 
 .ritual-steps {
@@ -1139,7 +1144,7 @@ a {
   bottom: 0.4rem;
   left: 0.6rem;
   width: 1px;
-  background: rgba(247, 239, 226, 0.18);
+  background: color-mix(in srgb, var(--cream) 18%, transparent);
 }
 
 .ritual-line-fill {
@@ -1162,7 +1167,7 @@ a {
   place-items: center;
   width: 1.7rem;
   height: 1.7rem;
-  border: 1px solid rgba(247, 239, 226, 0.3);
+  border: 1px solid color-mix(in srgb, var(--cream) 30%, transparent);
   border-radius: 50%;
   background: var(--espresso);
   color: var(--cream);
@@ -1179,8 +1184,8 @@ a {
 .ritual-step p {
   max-width: 42ch;
   margin: 0.5rem 0 0;
-  font-size: 0.9rem;
-  color: rgba(247, 239, 226, 0.62);
+  font-size: 0.92rem;
+  color: var(--cream-62);
 }
 
 /* ------------------------- values ------------------------- */
@@ -1215,7 +1220,7 @@ a {
 
 .value-item p {
   margin: 0.7rem 0 0;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--bark);
 }
 
@@ -1239,6 +1244,7 @@ a {
   line-height: 1.22;
   letter-spacing: -0.02em;
   color: var(--espresso);
+  text-wrap: balance;
 }
 
 /* ------------------------- invite ------------------------- */
@@ -1260,7 +1266,7 @@ a {
   font-family: var(--font-display);
   font-size: clamp(16rem, 34vw, 30rem);
   line-height: 1;
-  color: rgba(215, 165, 85, 0.1);
+  color: color-mix(in srgb, var(--gold) 10%, transparent);
   pointer-events: none;
 }
 
@@ -1283,8 +1289,8 @@ a {
 }
 
 .invite p {
-  color: rgba(247, 239, 226, 0.7);
-  font-size: 0.95rem;
+  color: var(--cream-70);
+  font-size: 1rem;
 }
 
 .invite-actions {
@@ -1301,7 +1307,7 @@ a {
 .site-footer {
   padding-block: clamp(3rem, 6vw, 4.5rem) 2rem;
   background: var(--ink);
-  color: rgba(247, 239, 226, 0.7);
+  color: var(--cream-70);
 }
 
 .footer-grid {
@@ -1331,20 +1337,20 @@ a {
 .footer-tagline {
   max-width: 32ch;
   margin: 1rem 0 1.2rem;
-  font-size: 0.88rem;
-  color: rgba(247, 239, 226, 0.6);
+  font-size: 0.92rem;
+  color: color-mix(in srgb, var(--cream) 60%, transparent);
 }
 
 .footer-seal {
   display: inline-block;
   padding: 0.35rem 0.75rem;
-  border: 1px solid rgba(247, 239, 226, 0.2);
+  border: 1px solid color-mix(in srgb, var(--cream) 20%, transparent);
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(247, 239, 226, 0.7);
+  color: var(--cream-70);
 }
 
 .footer-col h3 {
@@ -1354,15 +1360,15 @@ a {
   font-weight: 700;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(247, 239, 226, 0.65);
+  color: color-mix(in srgb, var(--cream) 65%, transparent);
 }
 
 .footer-col a,
 .footer-col p {
   display: block;
   margin: 0 0 0.45rem;
-  font-size: 0.87rem;
-  color: rgba(247, 239, 226, 0.76);
+  font-size: 0.86rem;
+  color: color-mix(in srgb, var(--cream) 76%, transparent);
   text-decoration: none;
   transition: color 0.3s var(--ease);
 }
@@ -1379,9 +1385,9 @@ a {
   gap: 0.75rem;
   margin-top: clamp(2.2rem, 4vw, 3.2rem);
   padding-top: 1.4rem;
-  border-top: 1px solid rgba(247, 239, 226, 0.12);
+  border-top: 1px solid color-mix(in srgb, var(--cream) 12%, transparent);
   font-size: 0.72rem;
-  color: rgba(247, 239, 226, 0.62);
+  color: var(--cream-62);
 }
 
 /* ------------------------- inner page hero ------------------------- */
@@ -1403,8 +1409,8 @@ a {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(215, 165, 85, 0.3),
-    rgba(247, 239, 226, 0) 68%
+    color-mix(in srgb, var(--gold) 30%, transparent),
+    transparent 68%
   );
   pointer-events: none;
 }
@@ -1452,7 +1458,7 @@ a {
 
 .filter-chip {
   padding: 0.55rem 1.05rem;
-  border: 1px solid rgba(91, 60, 42, 0.3);
+  border: 1px solid color-mix(in srgb, var(--bark) 30%, transparent);
   border-radius: 999px;
   background: transparent;
   color: var(--bark);
@@ -1541,7 +1547,7 @@ a {
   bottom: 1rem;
   padding: 0.4rem 0.85rem;
   border-radius: 999px;
-  background: rgba(252, 247, 238, 0.94);
+  background: color-mix(in srgb, var(--cream-soft) 94%, transparent);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1584,7 +1590,7 @@ a {
   max-width: 50ch;
   margin: 1.2rem 0 1.5rem;
   color: var(--bark);
-  font-size: 0.94rem;
+  font-size: 1rem;
 }
 
 .detail-notes {
@@ -1632,7 +1638,7 @@ a {
 
 .section-related {
   background: var(--cream-soft);
-  border-top: 1px solid rgba(91, 60, 42, 0.08);
+  border-top: 1px solid var(--bark-08);
 }
 
 /* ------------------------- about ------------------------- */
@@ -1668,7 +1674,7 @@ a {
   bottom: 1rem;
   padding: 0.4rem 0.85rem;
   border-radius: 999px;
-  background: rgba(252, 247, 238, 0.94);
+  background: color-mix(in srgb, var(--cream-soft) 94%, transparent);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -1679,13 +1685,13 @@ a {
 .about-copy p {
   max-width: 52ch;
   color: var(--bark);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .section-owners {
   background: var(--cream-soft);
-  border-top: 1px solid rgba(91, 60, 42, 0.08);
-  border-bottom: 1px solid rgba(91, 60, 42, 0.08);
+  border-top: 1px solid var(--bark-08);
+  border-bottom: 1px solid var(--bark-08);
 }
 
 .owner-grid {
@@ -1699,7 +1705,7 @@ a {
   flex-direction: column;
   gap: 0.55rem;
   padding: clamp(1.5rem, 2.8vw, 2.1rem);
-  border: 1px solid rgba(91, 60, 42, 0.16);
+  border: 1px solid color-mix(in srgb, var(--bark) 16%, transparent);
   border-radius: 24px;
   background: var(--cream);
   transition: transform 0.5s var(--ease), border-color 0.5s var(--ease),
@@ -1708,8 +1714,8 @@ a {
 
 .owner-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(192, 118, 74, 0.5);
-  box-shadow: 0 24px 40px -32px rgba(43, 26, 18, 0.55);
+  border-color: color-mix(in srgb, var(--clay) 50%, transparent);
+  box-shadow: 0 24px 40px -32px color-mix(in srgb, var(--espresso) 55%, transparent);
 }
 
 .monogram {
@@ -1718,7 +1724,7 @@ a {
   width: 72px;
   height: 72px;
   margin-bottom: 0.9rem;
-  border: 1px solid rgba(91, 60, 42, 0.18);
+  border: 1px solid color-mix(in srgb, var(--bark) 18%, transparent);
   border-radius: 50%;
   background: var(--sand);
   font-family: var(--font-display);
@@ -1742,7 +1748,7 @@ a {
 
 .owner-bio {
   margin: 0.2rem 0 0;
-  font-size: 0.86rem;
+  font-size: 0.92rem;
   line-height: 1.6;
   color: var(--bark);
 }
@@ -1756,7 +1762,7 @@ a {
   color: var(--cream);
 }
 
-.about-beliefs .is-accent .word-inner {
+.about-beliefs .word-inner .accent {
   color: var(--gold);
 }
 
@@ -1768,7 +1774,7 @@ a {
 
 .belief {
   padding-top: 1.4rem;
-  border-top: 1px solid rgba(247, 239, 226, 0.2);
+  border-top: 1px solid color-mix(in srgb, var(--cream) 20%, transparent);
 }
 
 .belief h3 {
@@ -1778,8 +1784,8 @@ a {
 
 .belief p {
   margin: 0.6rem 0 0;
-  font-size: 0.88rem;
-  color: rgba(247, 239, 226, 0.62);
+  font-size: 0.92rem;
+  color: var(--cream-62);
 }
 
 .belief-cta {
@@ -1856,14 +1862,15 @@ a {
   justify-content: space-between;
   gap: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px dashed rgba(91, 60, 42, 0.22);
-  font-size: 0.84rem;
+  border-bottom: 1px dashed color-mix(in srgb, var(--bark) 22%, transparent);
+  font-size: 0.86rem;
+  font-variant-numeric: tabular-nums;
   color: var(--bark);
 }
 
 .contact-form {
   padding: clamp(1.4rem, 3.2vw, 2.5rem);
-  border: 1px solid rgba(91, 60, 42, 0.16);
+  border: 1px solid color-mix(in srgb, var(--bark) 16%, transparent);
   border-radius: 26px;
   background: var(--cream-soft);
 }
@@ -1871,18 +1878,18 @@ a {
 .form-lede {
   max-width: 44ch;
   margin: 0.7rem 0 1.6rem;
-  font-size: 0.87rem;
+  font-size: 0.92rem;
   color: var(--bark);
 }
 
 .form-alert {
-  border: 1px solid rgba(192, 118, 74, 0.38);
+  border: 1px solid color-mix(in srgb, var(--clay) 38%, transparent);
   border-radius: 12px;
-  background: rgba(192, 118, 74, 0.14);
+  background: color-mix(in srgb, var(--clay) 14%, transparent);
   color: var(--espresso);
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   --bs-alert-color: var(--espresso);
-  --bs-alert-bg: rgba(192, 118, 74, 0.12);
+  --bs-alert-bg: color-mix(in srgb, var(--clay) 12%, transparent);
   --bs-alert-border-color: transparent;
 }
 
@@ -1899,7 +1906,7 @@ a {
 .contact-form .form-select {
   padding: 0.65rem 0;
   border: 0;
-  border-bottom: 1px solid rgba(91, 60, 42, 0.32);
+  border-bottom: 1px solid color-mix(in srgb, var(--bark) 32%, transparent);
   border-radius: 0;
   background-color: transparent;
   color: var(--espresso);
@@ -1908,7 +1915,7 @@ a {
 }
 
 .contact-form .form-control::placeholder {
-  color: rgba(91, 60, 42, 0.78);
+  color: color-mix(in srgb, var(--bark) 78%, transparent);
 }
 
 .contact-form .form-control:focus,
@@ -1945,8 +1952,8 @@ a {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(43, 26, 18, 0.05),
-    rgba(43, 26, 18, 0.7)
+    color-mix(in srgb, var(--espresso) 5%, transparent),
+    color-mix(in srgb, var(--espresso) 70%, transparent)
   );
 }
 
@@ -1962,7 +1969,7 @@ a {
   border-radius: 50%;
   background: var(--cream);
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 6px rgba(192, 118, 74, 0.4);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--clay) 40%, transparent);
 }
 
 .map-pin span {
@@ -1976,10 +1983,10 @@ a {
 
 @keyframes pin-pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(215, 165, 85, 0.7);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--gold) 70%, transparent);
   }
   100% {
-    box-shadow: 0 0 0 26px rgba(215, 165, 85, 0);
+    box-shadow: 0 0 0 26px transparent;
   }
 }
 
@@ -1992,7 +1999,7 @@ a {
   gap: 0.2rem;
   padding: 0.8rem 1.1rem;
   border-radius: 16px;
-  background: rgba(29, 17, 10, 0.82);
+  background: color-mix(in srgb, var(--ink) 82%, transparent);
   backdrop-filter: blur(6px);
   color: var(--cream);
 }
@@ -2008,7 +2015,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(247, 239, 226, 0.75);
+  color: color-mix(in srgb, var(--cream) 75%, transparent);
 }
 
 /* ------------------------- 404 ------------------------- */
@@ -2146,6 +2153,19 @@ a {
   }
 }
 
+@media (min-width: 992px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .hero-inner {
+    margin-block: auto;
+  }
+}
+
 @media (max-width: 767.98px) {
   .section {
     padding-block: clamp(3.5rem, 8vw, 5rem);
@@ -2232,11 +2252,19 @@ a {
   }
 
   .story-stats {
-    gap: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 1rem;
   }
 
   .featured-foot {
     gap: 1.2rem;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .story-stats strong {
+    font-size: 1.45rem;
   }
 }
 

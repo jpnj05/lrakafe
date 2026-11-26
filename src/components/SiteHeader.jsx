@@ -96,7 +96,7 @@ export default function SiteHeader() {
           </nav>
           <div className="mobile-menu-foot">
             <p>28 Luna Street, Jaro, Iloilo City</p>
-            <p>Open daily · 7:00 AM — 10:00 PM</p>
+            <p>Open daily · 7:00 AM – 10:00 PM</p>
             <a href="mailto:hello@lrakafe.ph">hello@lrakafe.ph</a>
           </div>
         </Offcanvas.Body>

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import AnimatedHeading from '../components/AnimatedHeading'
 import Magnetic from '../components/Magnetic'
 import PageIntro from '../components/PageIntro'
+import ResponsiveImage from '../components/ResponsiveImage'
 import Reveal from '../components/Reveal'
 
 const owners = [
@@ -21,7 +22,7 @@ const owners = [
     initials: 'SRS',
     name: 'Sam Robert B. Susvilla',
     role: 'Co-Founder · Operations Lead',
-    bio: 'Keeps the bar running, the beans stocked, and remembers every regular’s order — including the ones who changed it last week.',
+    bio: 'Keeps the bar running, the beans stocked, and remembers every regular’s order, including the ones who changed it last week.',
   },
 ]
 
@@ -36,7 +37,7 @@ const beliefs = [
   },
   {
     title: 'Made by hand',
-    copy: 'Syrups, pastries, signage, playlists — if it can be made in-house, we make it in-house.',
+    copy: 'Syrups, pastries, signage, playlists: if it can be made in-house, we make it in-house.',
   },
 ]
 
@@ -52,12 +53,13 @@ export default function About() {
       <section className="section section-story-about">
         <div className="container-lra about-grid">
           <Reveal className="about-media">
-            <img
+            <ResponsiveImage
               src="/images/about-latte.jpg"
+              widths={[592, 1184]}
+              sizes="(min-width: 992px) 44vw, 92vw"
               alt="A latte and a croissant on a linen table at LraKafe"
               width="1184"
               height="880"
-              loading="lazy"
             />
             <span className="about-media-tag">The first table, 2026</span>
           </Reveal>
@@ -81,7 +83,7 @@ export default function About() {
               </p>
               <p>
                 The idea was never to build a café empire. It was to build the
-                room we kept looking for — warm lights, no minimum order, a
+                room we kept looking for: warm lights, no minimum order, a
                 barista who would tell you the truth about a drink. We named it
                 after a shared habit of slurring our own initials together late
                 at night: LraKafe. It stuck because nobody could pronounce it
@@ -110,7 +112,7 @@ export default function About() {
             </div>
             <p className="section-aside">
               Group members, roasters, baristas, and the ones who answer the
-              emails — usually all three, all week.
+              emails, usually all three, all week.
             </p>
           </div>
 
